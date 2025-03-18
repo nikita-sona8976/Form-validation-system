@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<script>
+  function data(){
+ var a=document.getElementById("n1").value;
+ var b=document.getElementById("n2").value;
+ var c=document.getElementById("n3").value;
+ var d=document.getElementById("n4").value;
+ if(a==""||b==""||c==""||d==""){
+  alert("Please Enter all Information");
+return false;
+}
+else if(b.length<10||b.length>10){
+alert("Number should be 10 digit cheak your number!!");
+return false;
+}
+else{
+  true;
+}
+}
+</script>
+<body>
+  <div class="container">
+  <form onsubmit="return data()" action="msg.html">
+    User Name:<br><input type="text" id="n1"><br>
+    contact Number:<br><input type="number" id="n2"><br>
+     Password:<br><input type="password" id="n3"><br>
+      conform:<br><input type="password" id="n4"><br><br>
+    <input type="submit" style="color: black;">
+  
+  </form>
+  </div>  
+</body>
+</html>
